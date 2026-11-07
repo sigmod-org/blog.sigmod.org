@@ -17,7 +17,7 @@ paginate: 10
 paginate_path: "/page/:num/"
 
 include: [_pages]
-exclude: [README.md, SUBMITTING.md, Gemfile, Gemfile.lock, vendor, .bundle]
+exclude: [README.md, SUBMITTING.md, tools, Gemfile, Gemfile.lock, vendor, .bundle]
 
 plugins:
   - jekyll-paginate

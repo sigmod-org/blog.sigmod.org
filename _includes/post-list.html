@@ -1,7 +1,7 @@
 {%- for post in include.posts %}
 <article class="post-card{% if post.image %} has-image{% endif %}">
   {%- if post.image %}
-  <a class="post-thumb" href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>
+  <a class="post-thumb" href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"{% if post.image_position %} style="object-position: {{ post.image_position }}"{% endif %}></a>
   {%- endif %}
   <h2 class="entry-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
   {% include post-meta.html post=post %}

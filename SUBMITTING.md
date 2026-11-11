@@ -284,6 +284,9 @@ Rules for the part between the `---` lines (the *front matter*; all fields are l
 - **categories:** existing category names, spelled exactly as listed (section 5.4).
 - **excerpt** (optional): otherwise the first paragraph is used.
 - **image** (optional): a thumbnail shown next to the post on the home page.
+- **image_position** (optional): which part of the thumbnail to keep when it is cropped to the
+  wide preview box, e.g. `"top"` for a portrait so the face stays visible (any CSS
+  `object-position` value, such as `"center 20%"`). The default is the centre.
 
 For the body:
 
@@ -602,6 +605,7 @@ Markdown or checking references, as long as the text remains their own.
 | `categories` | yes | `[Databases, Machine Learning]` | Existing names, exact spelling. |
 | `excerpt` | no | `"One or two sentences."` | Shown on the home page; default is the first paragraph. |
 | `image` | no | `/assets/posts/<post-file-name>/figure1.png` | Thumbnail on the home page. |
+| `image_position` | no | `"top"` | Part of the thumbnail kept in the preview crop; default is the centre. |
 | `date` | no | `2026-11-15 09:00:00` | Only to set a time of day; the date must match the file name. |
 | `keep_local_edits` | old posts only | `true` | On posts imported from the old blog (they have `wp_id`), protects hand edits from re-imports. |
 

@@ -47,7 +47,7 @@ class SigmodAuthorPages < Jekyll::Generator
     have = site.pages.map(&:url)
     authors.each do |key, info|
       url = "/author/#{key}/"
-      next if have.include?(url) || (by_person[key].empty? && !info["members"])
+      next if have.include?(url) || (!by_person.key?(key) && !info["members"])
 
       page = Jekyll::PageWithoutAFile.new(site, site.source, "author/#{key}", "index.html")
       page.data.merge!("layout" => "author", "title" => info["name"] || key, "author" => key)
@@ -64,7 +64,7 @@ class SigmodAuthorPages < Jekyll::Generator
         if (authors[key] || {})["members"]
           newest_first.select { |doc| doc.data["author"].to_s == key }
         else
-          by_person[key]
+          by_person.fetch(key, [])
         end
     end
 

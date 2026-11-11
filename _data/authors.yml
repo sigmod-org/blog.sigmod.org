@@ -116,6 +116,8 @@
   members: ["dimitris-sacharidis", "giorgos-giannopoulos", "loukas-kavouras"]
 "dominik-moritz":
   name: "Dominik Moritz"
+  url: "https://www.domoritz.de/"
+  avatar: "/assets/authors/dominik-moritz.jpg"
 "donaldk":
   name: "Donald Kossmann"
   wp_id: 10
@@ -173,6 +175,8 @@
   avatar: "/wp-content/uploads/2018/01/Jagadish-128x128.jpg"
 "haofen-wang":
   name: "Haofen Wang"
+  url: "https://tongji-kgllm.github.io/people/wang-haofen/"
+  avatar: "/assets/authors/haofen-wang.jpg"
 "haridimos-kondylakis":
   name: "Haridimos Kondylakis"
   avatar: "/assets/authors/haridimos-kondylakis.jpg"
@@ -201,6 +205,8 @@
   avatar: "/wp-content/uploads/2018/01/widom-96x96.jpg"
 "jianguo-wang":
   name: "Jianguo Wang"
+  url: "https://www.cs.purdue.edu/homes/csjgwang/"
+  avatar: "/assets/authors/jianguo-wang.jpg"
 "jigneshpatel":
   name: "Jignesh Patel"
   wp_id: 34
@@ -284,6 +290,8 @@
   avatar: "/wp-content/uploads/2016/02/letizia-150x100.jpg"
 "lingyun-yu":
   name: "Lingyun Yu"
+  url: "https://scholar.xjtlu.edu.cn/en/persons/LingyunYu"
+  avatar: "/assets/authors/lingyun-yu.jpg"
 "loukas-kavouras":
   name: "Loukas Kavouras"
   avatar: "/assets/authors/loukas-kavouras.jpg"
@@ -388,6 +396,8 @@
   avatar: "/assets/authors/shivakumar-vaithyanathan.jpg"
 "shreya-shankar":
   name: "Shreya Shankar"
+  url: "https://www.sh-reya.com/"
+  avatar: "/assets/authors/shreya-shankar.jpg"
 "sihem":
   name: "Sihem Amer-Yahia"
   wp_id: 22
@@ -430,8 +440,12 @@
   avatar: "/wp-content/uploads/2012/12/Photo-II-from-session-100x150.jpg"
 "tianxing-wu":
   name: "Tianxing Wu"
+  url: "https://tianxing-wu.github.io/"
+  avatar: "/assets/authors/tianxing-wu.jpg"
 "vanessa-braganholo":
   name: "Vanessa Braganholo"
+  url: "http://www.ic.uff.br/~vanessa/"
+  avatar: "/assets/authors/vanessa-braganholo.jpg"
 "vanessawolfgang":
   name: "Vanessa Braganholo and Wolfgang Lehner"
   wp_id: 89
@@ -449,6 +463,8 @@
   avatar: "/wp-content/uploads/2020/04/20170525_vikram_diagonal_zoom-150x150.jpg"
 "wei-hu":
   name: "Wei Hu"
+  url: "http://ws.nju.edu.cn/~whu/"
+  avatar: "/assets/authors/wei-hu.jpg"
 "wolfgang-lehner":
   name: "Wolfgang Lehner"
   avatar: "/assets/authors/wolfgang-lehner.jpg"
@@ -460,11 +476,14 @@
   members: ["arijit-khan", "yinghui-wu"]
 "xi-chen":
   name: "Xi Chen"
+  avatar: "/assets/authors/xi-chen.jpg"
 "yannis-velegrakis":
   name: "Yannis Velegrakis"
   avatar: "/assets/authors/yannis-velegrakis.jpg"
 "yifan-hu":
   name: "Yifan Hu"
+  url: "https://www.khoury.northeastern.edu/people/yifan-hu/"
+  avatar: "/assets/authors/yifan-hu.jpg"
 "yinghui-wu":
   name: "Yinghui Wu"
   avatar: "/assets/authors/yinghui-wu.jpg"

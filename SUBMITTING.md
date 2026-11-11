@@ -518,22 +518,35 @@ Before asking for review, and again before merging:
 ## 12. Instructions for AI agents
 
 An AI coding agent (for example [Claude Code](https://www.anthropic.com/claude-code))
-can do sections 4–7 for an editor. A prompt for it can be as short as:
+can do sections 4–7 for an editor. Claude Code also reads [CLAUDE.md](CLAUDE.md)
+automatically when it works in this repository. That file sets the order of work: check
+the authors first and ask when unsure, then prepare the post. Other agents should be
+pointed to it.
 
-> Following SUBMITTING.md, prepare the attached post by Jane Doe and John Roe
-> (draft.docx, figure1.png, figure2.png, jane.jpg, john.jpg) for publication on
-> 2026-11-15, with categories "Databases" and "Machine Learning". Open a pull request
-> and give me its link; do not merge.
+Give the agent three things: **the post** (a Google Drive or Docs link, or the text
+itself), **the authors' names** in byline order, and **a photo for each author**. Add
+the publication date and the categories. For example:
+
+> Prepare this post for the SIGMOD Blog: https://docs.google.com/document/d/…
+> Authors: Jane Doe (photo: https://…/jane.jpg), John Roe (photo attached).
+> Publish on 2026-11-15, categories "Databases" and "Machine Learning".
+
+The agent first checks each author against the existing ones and asks you to confirm
+anything uncertain. Only then does it prepare the post, show you the preview, and open
+the pull request. It never merges.
 
 **Rules for the agent** (follow all of them):
 
 1. **Do not edit the text.** Convert formatting only; keep every sentence as the author
    wrote it. If something looks wrong (a typo, a broken reference), list it for the
    editor instead of changing it.
-2. **Search before adding authors.** Run `ruby tools/find_author.rb <surname>` for
-   every author. Reuse an existing key even if it looks odd. Only add an entry when
-   there is no match after trying the surname alone. Never use or create a combined
-   entry (one with `members:`) for a new post.
+2. **Check the authors first, and ask when unsure.** Before converting anything, run
+   `ruby tools/find_author.rb <surname>` for every author. Reuse an exact match even if
+   its key looks odd. If there are several matches, a similar but different name, or a
+   different affiliation, ask the editor; do not guess. Add an entry only when the
+   surname alone finds nothing. If an existing author already has a photo, ask before
+   replacing it. Never use or create a combined entry (one with `members:`) for a new
+   post. CLAUDE.md shows how to ask.
 3. **Use the publication date** the editor gave, not today's date, in the file name.
 4. **Work on a new branch** named `post/<post-file-name>`, created from an up-to-date
    `main`. Never commit to `main` directly.

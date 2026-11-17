@@ -105,6 +105,12 @@ To leap towards the moonshot goals, I see the memory layer of a personal agent a
 
 Twenty years ago, Semex asked how to make sense of a person’s digital data. The question has not changed; what has changed is that the data now arrives through a camera, the reader is a model, and soon the device will decide what to record. The database community laid much of the foundation, from integration and reference reconciliation to provenance and privacy, and I believe it has as much to offer this chapter as it did the first.
 
+## About the Author
+
+Xin Luna Dong is a Principal Scientist at Meta Wearables AI, where she leads the Agentic AI efforts for building trustworthy and personalized assistants on wearable devices. Previously, she spent over a decade advancing knowledge graph technology, including the Amazon Product Graph and the Google Knowledge Graph. She is co-author of Machine Knowledge: Creation and Curation of Comprehensive Knowledge Bases and Big Data Integration.
+
+She was named an ACM Fellow and an IEEE Fellow for "significant contributions to knowledge graph construction and data integration," and has received the VLDB Women in Database Research Award, the VLDB Early Career Research Contribution Award, and recently the SigKDD 2026 Best Paper Award (Data & Benchmark track). She has also served as an ACM Distinguished Speaker, a member of the VLDB Endowment, and PC co-chair for ICDM'27, SigKDD'22 (ADS track), WSDM'22, VLDB'21, and SIGMOD'18.
+
 ## References
 
 1. Xin Luna Dong and Alon Halevy. *A Platform for Personal Information Management and Integration.* CIDR 2005.
@@ -137,9 +143,3 @@ Twenty years ago, Semex asked how to make sense of a person’s digital data. Th
 28. Xin Luna Dong, Laure Berti-Equille, and Divesh Srivastava. *Integrating Conflicting Data: The Role of Source Dependence.* VLDB 2009.
 29. Todd J. Green, Grigoris Karvounarakis, and Val Tannen. *Provenance Semirings.* PODS 2007.
 30. Peter Buneman, Sanjeev Khanna, and Wang-Chiew Tan. *On Propagation of Deletions and Annotations through Views.* PODS 2002.
-
-## About the Author
-
-*Xin Luna Dong is a Principal Scientist at Meta Wearables AI, where she leads the Agentic AI efforts for building trustworthy and personalized assistants on wearable devices. Previously, she spent over a decade advancing knowledge graph technology, including the Amazon Product Graph and the Google Knowledge Graph. She is co-author of Machine Knowledge: Creation and Curation of Comprehensive Knowledge Bases and Big Data Integration.*
-
-*She was named an ACM Fellow and an IEEE Fellow for "significant contributions to knowledge graph construction and data integration," and has received the VLDB Women in Database Research Award, the VLDB Early Career Research Contribution Award, and recently the SigKDD 2026 Best Paper Award (Data & Benchmark track). She has also served as an ACM Distinguished Speaker, a member of the VLDB Endowment, and PC co-chair for ICDM'27, SigKDD'22 (ADS track), WSDM'22, VLDB'21, and SIGMOD'18.*

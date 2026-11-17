@@ -8,9 +8,10 @@
     {%- endfor %}
   {%- endif %}
   {%- if include.reads and site.goatcounter %}
-    {%- comment %} Old WordPress views (frozen) + new GoatCounter views, added by assets/js/reads.js. {% endcomment %}
+    {%- comment %} Old WordPress views (frozen) + new GoatCounter views. assets/js/reads.js shows the total once both are known; without JavaScript only the old count shows. {% endcomment %}
     {%- assign old = site.data.legacy_views.views[include.post.wp_id] | default: 0 %}
     {%- if old >= 1000 %}{% assign lo = old | modulo: 1000 | prepend: "00" | slice: -3, 3 %}{% capture old_txt %}{{ old | divided_by: 1000 }},{{ lo }}{% endcapture %}{% else %}{% assign old_txt = old %}{% endif %}
-    <span class="reads" data-counter="https://{{ site.goatcounter }}.goatcounter.com/counter/" data-path="{{ include.post.url }}" data-legacy="{{ old }}"{% if old == 0 %} hidden{% endif %}> | <span class="reads-n">{{ old_txt }}</span> reads</span>
+    <span class="reads" data-counter="https://{{ site.goatcounter }}.goatcounter.com/counter/" data-path="{{ include.post.url }}" data-legacy="{{ old }}" hidden> | <span class="reads-n"></span> reads</span>
+    {%- if old > 0 %}<noscript> | {{ old_txt }} reads</noscript>{% endif %}
   {%- endif %}
 </p>

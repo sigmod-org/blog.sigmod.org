@@ -1,16 +1,17 @@
-// Adds the new GoatCounter views to the old WordPress count shown under a post
-// (see _includes/post-meta.html). Without JavaScript the old count stays.
+// Shows "N reads" under a post: the old WordPress count (frozen) plus the new
+// GoatCounter views (see _includes/post-meta.html). The label stays hidden until
+// the total is known, so the number never changes in front of the reader.
 (function () {
   var el = document.querySelector(".reads[data-path]");
-  if (!el || !window.fetch) return;
+  if (!el) return;
   var legacy = parseInt(el.getAttribute("data-legacy"), 10) || 0;
+  function show(n) {
+    el.querySelector(".reads-n").textContent = n.toLocaleString("en-US");
+    el.hidden = false;
+  }
+  if (!window.fetch) return show(legacy);
   fetch(el.getAttribute("data-counter") + encodeURIComponent(el.getAttribute("data-path")) + ".json")
     .then(function (r) { return r.ok ? r.json() : { count: "0" }; })  // 404: no views yet
-    .then(function (d) {
-      var n = legacy + (parseInt(String(d.count).replace(/\D/g, ""), 10) || 0);
-      if (!n) return;
-      el.querySelector(".reads-n").textContent = n.toLocaleString("en-US");
-      el.hidden = false;
-    })
-    .catch(function () {});
+    .then(function (d) { show(legacy + (parseInt(String(d.count).replace(/\D/g, ""), 10) || 0)); })
+    .catch(function () { show(legacy); });  // counter unreachable: old count only
 })();

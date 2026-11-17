@@ -591,7 +591,7 @@ Markdown or checking references, as long as the text remains their own.
 | A name in the byline shows a key such as `jane-doe` | The key is missing from `_data/authors.yml`; the build prints a yellow `Authors:` warning. |
 | A category link shows "page not found" | The category name does not match any file in `category/`: fix the spelling or add the category (section 5.4). |
 | The live site did not change after a merge | Check the *Actions* tab: the build may still be running, or it failed (red ✗). |
-| A post shows "0 reads" or no reads count | Normal for a new post: views are counted on the live site only, and the count appears after the first visit. |
+| A post shows "0 reads" | Normal for a new post: views are counted on the live site only. The count can take a while to appear, because GoatCounter's public counter caches its answers. |
 
 ---
 
